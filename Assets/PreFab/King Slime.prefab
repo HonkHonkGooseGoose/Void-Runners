@@ -222,6 +222,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 084252546c40cfd468754fb6ded61261, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 7
   pointA: {x: 10, y: 0}
   pointB: {x: -10, y: 0}
