@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.SceneManagement;
+using UnityEngine.InputSystem;
 
 public class PlayerControllerPlatformer : MonoBehaviour
 {
@@ -22,9 +23,8 @@ public class PlayerControllerPlatformer : MonoBehaviour
     void Update()
     {
         // Movement
-        moveX = Input.GetAxis("Horizontal") * speed * Time.deltaTime;
-        transform.Translate(moveX, 0, 0);
 
+        move();
         //if (moveX > 0)
         //{
         //    playerSprite.flipX = false;
@@ -35,20 +35,41 @@ public class PlayerControllerPlatformer : MonoBehaviour
         //    playerSprite.flipX = true;
         //}
 
-        //Jump Code
-        if (jumping == false && Input.GetButtonDown("Jump") || jumping == false && Input.GetKeyDown(KeyCode.W))
+        // Jump Code
+        if (!jumping && (Keyboard.current.spaceKey.wasPressedThisFrame || Keyboard.current.upArrowKey.wasPressedThisFrame))
         {
-            rb.linearVelocity = Vector2.up * jumpForce;
-            jumping = true;
+            jump();
             //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); // Restarts game 
         }
+    }
 
-        void OnCollisionEnter2D(Collision collision) { 
-            if (collision.gameObject.tag == "Ground")
-            {
-                jumping = false;
-            }
+    void move()
+    {
+        moveX = 0f;
+        if (Keyboard.current != null)
+        {
+            // Simple left/right input
+            if (Keyboard.current.leftArrowKey.isPressed)
+                moveX = -speed * Time.deltaTime;
+            else if (Keyboard.current.rightArrowKey.isPressed)
+                moveX = speed * Time.deltaTime;
+        }
+        //moveX = Input.GetAxis("Horizontal") * speed * Time.deltaTime;
+        transform.Translate(moveX, 0, 0);
+        //rb.velocity = new Vector2 (moveX, rb.velocity.y);
+    }
 
+    void jump()
+    {
+        rb.linearVelocity = Vector2.up * jumpForce;
+        jumping = true;
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Ground")
+        {
+            jumping = false;
         }
     }
 }
@@ -57,4 +78,3 @@ public class PlayerControllerPlatformer : MonoBehaviour
 
 
 
-       
