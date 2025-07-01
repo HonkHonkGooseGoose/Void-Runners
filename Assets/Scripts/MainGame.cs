@@ -25,25 +25,25 @@ public class MainGame : MonoBehaviour
         
     }
 
-     private static ArrayList GenrateObsitcals(List<string> obsticle, int playerPosition, ArrayList loadedObstical)
+     private static ArrayList generateObstacles(List<string> obstacleList, int playerPosition, ArrayList<string> loadedObsticle)
     {
-        int expectedObstical;
-        int numObstacle = 2;
-        int diffrence = playerPosition - numObstacle;
+        int expectedObsticle;
+        int expectedPlayerPosition = 2;
+        int difference = playerPosition - expectedPlayerPosition;
         System.Random select = new System.Random();
-        if (diffrence == 0)
+        if (difference == 0)
         {
-            return loadedObstical;
+            return loadedObsticle;
         }
         else
         {
-            for (int i = 0; i < diffrence; i++)
+            for (int i = 0; i < difference; i++)
             {
-                expectedObstical = select.Next(0, obsticle.Length - 1);
-                loadedObstical.Add(obsticle[expectedObstical]);
-                loadedObstical.RemoveAt(0);
+                expectedObsticle = select.Next(0, obstacleList.Length - 1);
+                loadedObsticle.Add(obstacleList[expectedObsticle]);
+                loadedObsticle.RemoveAt(0);
             }
-            return loadedObstical;
+            return loadedObsticle;
         }
     }
 
