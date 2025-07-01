@@ -25,7 +25,7 @@ public class MainGame : MonoBehaviour
         
     }
 
-     private static ArrayList generateObstacles(List<string> obstacleList, int playerPosition, ArrayList<string> loadedObsticle)
+     private static ArrayList generateObstacles(List<string> obstacleList, int playerPosition, ArrayList<string> loadedObsaicle)
     {
         int expectedObsticle;
         int expectedPlayerPosition = 2;
@@ -33,17 +33,17 @@ public class MainGame : MonoBehaviour
         System.Random select = new System.Random();
         if (difference == 0)
         {
-            return loadedObsticle;
+            return loadedObstacle;
         }
         else
         {
             for (int i = 0; i < difference; i++)
             {
                 expectedObsticle = select.Next(0, obstacleList.Length - 1);
-                loadedObsticle.Add(obstacleList[expectedObsticle]);
-                loadedObsticle.RemoveAt(0);
+                loadedObstacle.Add(obstacleList[expectedObsticle]);
+                loadedObstacle.RemoveAt(0);
             }
-            return loadedObsticle;
+            return loadedObstacle;
         }
     }
 
