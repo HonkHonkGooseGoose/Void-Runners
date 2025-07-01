@@ -18,10 +18,10 @@ public class MainGame : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //static int obsticalSelect(Array Obstical)
-        //{
+        // static int obsticalSelect(Array Obstical)
+        // {
 
-        //}
+        // }
         Console.WriteLine("Update");
         
     }
