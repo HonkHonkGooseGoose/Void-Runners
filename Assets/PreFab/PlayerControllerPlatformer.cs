@@ -22,6 +22,7 @@ public class PlayerControllerPlatformer : MonoBehaviour
 
     void Update()
     {
+
         // Movement
 
         move();
@@ -42,6 +43,8 @@ public class PlayerControllerPlatformer : MonoBehaviour
             //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); // Restarts game 
         }
     }
+
+
 
     void move()
     {
@@ -67,14 +70,18 @@ public class PlayerControllerPlatformer : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Ground")
+        if (collision.gameObject.CompareTag("Ground"))
         {
             jumping = false;
         }
+
+        if (collision.gameObject.CompareTag("Death"))
+        {
+            //gameObject.SetActive(false);
+            playerSprite.color = Color.red;
+        }
     }
 }
-
-
 
 
 
