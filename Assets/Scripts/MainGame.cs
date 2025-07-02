@@ -7,7 +7,7 @@ using NUnit.Framework;
 
 public class MainGame : MonoBehaviour
 {
-    
+
     int maxLoadedObstacles;
 
 
@@ -17,6 +17,13 @@ public class MainGame : MonoBehaviour
       "pranav2",
       "pranav3",
       "pranav4",
+      "ryan1",
+      "ryan2",
+      "ryan3",
+      "ryan4",
+      "maria1",
+      "maria2",
+      "maria3",
 
     };
 
@@ -44,7 +51,7 @@ public class MainGame : MonoBehaviour
 
     }
 
-    private static List<string> generateObstacles(List<string> obstacleList, int playerPosition, List<string> loadedObstacle)
+    private void GenerateObstacles(int playerPosition)
     {
         int expectedObsticle;
         int expectedPlayerPosition = 2;
@@ -52,17 +59,17 @@ public class MainGame : MonoBehaviour
         System.Random select = new System.Random();
         if (difference == 0)
         {
-            return loadedObstacle;
+            return;
         }
         else
         {
             for (int i = 0; i < difference; i++)
             {
-                expectedObsticle = select.Next(0, obstacleList.Count - 1);
-                loadedObstacle.Add(obstacleList[expectedObsticle]);
-                loadedObstacle.RemoveAt(0);
+                string newObstacle = PickRandomScene();
+                AddObstacle(newObstacle);
+                RemoveObstacle(loadedObstacles[0]);
             }
-            return loadedObstacle;
+            
         }
     }
 
@@ -95,7 +102,7 @@ public class MainGame : MonoBehaviour
     }
 
 
-    private static int getObjectIndex(int playerPosition, List<int> lengths)
+    private static int GetObjectIndex(int playerPosition, List<int> lengths)
     {
         int index = 0;
         int remaningDistance = playerPosition;
