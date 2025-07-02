@@ -12,9 +12,11 @@ public class MainGame : MonoBehaviour
 
     public List<string> obstacleList = new List<string>()
     {
-        "pranav1","pranav2","pranav3","pranav4",
+        //"pranav1","pranav2","pranav3","pranav4",
+
         "ryan1","ryan2","ryan3","ryan4",
-        "maria1","maria2","maria3"
+        "ryan4","ryan6","ryan7","ryan8", 
+
     };
 
     // Track where the next obstacle should begin (world-space X)
