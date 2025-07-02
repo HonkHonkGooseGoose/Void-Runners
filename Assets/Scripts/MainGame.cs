@@ -2,6 +2,7 @@ using System;
 using UnityEngine;
 using System.Collections;
 using UnityEditor.Rendering;
+using NUnit.Framework;
 
 public class MainGame : MonoBehaviour
 {
@@ -46,5 +47,17 @@ public class MainGame : MonoBehaviour
             return loadedObstacle;
         }
     }
-
+    private static int getObjectIndex(int playerPosition, List<int> lengths)
+    {
+        int index = 0;
+        int remaningDistance = playerPosition;
+        while (index < lengths.Count)
+        {
+            remaningDistance -= lengths[index];
+            if (remaningDistance < 0)
+                return index;
+            index++;
+        }
+        return index;
+    }
 }
