@@ -28,7 +28,7 @@ public class PlayerControllerPlatformer : MonoBehaviour
         //if (moveX > 0)
         //{
         //    playerSprite.flipX = false;
-        //}
+        //} 
 
         //if (moveX < 0)
         //{
