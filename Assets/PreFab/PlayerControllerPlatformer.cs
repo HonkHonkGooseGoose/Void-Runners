@@ -44,6 +44,8 @@ public class PlayerControllerPlatformer : MonoBehaviour
         }
     }
 
+
+
     void move()
     {
         moveX = 0f;
@@ -75,7 +77,7 @@ public class PlayerControllerPlatformer : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Death"))
         {
-            //gameObject.SetActive(false)
+            //gameObject.SetActive(false);
             playerSprite.color = Color.red;
         }
     }
