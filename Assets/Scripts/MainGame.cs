@@ -7,7 +7,7 @@ using NUnit.Framework;
 
 public class MainGame : MonoBehaviour
 {
-
+    System.Random rnd = new System.Random();
     int maxLoadedObstacles;
 
 
@@ -73,11 +73,24 @@ public class MainGame : MonoBehaviour
         }
     }
 
-    private List<int> PickRandomScene()
+    private string PickRandomScene()
     {
+        do
+        {
+            int i = rnd.Next(0, obstacleList.Count);
+            selectedObstacle = obstacleList[i];
 
-        // Pick a random scene from the obstacleList and add it to the loadedObstacles list if it is not in loadedObstacles already
-        
+        } while (loadedObstacles.Contains(selectedObstacle);
+        // Pick a random scene from the obstacleList and return the name of the obstacle if it is not in loadedObstacles already
+
+        // while a object hasnt been picked
+
+        // pick a random string from obstacleList
+
+        // check if it isn't in loadedObstacles
+
+
+        return selectedObstacle;
     }
 
     private void AddObstacle(string obstacleName)
