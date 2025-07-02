@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: c5c692f126d4e3452aef1a3cf1dacd24
+guid: 154b010f79391544793c8ca6805b9197
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8868729072188591806
-    second: duck_0
+      213: 1238448586401026881
+    second: goose 1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -97,7 +97,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: WebGL
+    buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: duck_0
+      name: goose 1_0
       rect:
         serializedVersion: 2
-        x: 55
-        y: 55
-        width: 146
-        height: 146
+        x: 9
+        y: 0
+        width: 308
+        height: 502
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ebe0bf44a1e041b70800000000000000
-      internalID: 8868729072188591806
+      spriteID: 14394018d6adf2110800000000000000
+      internalID: 1238448586401026881
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      duck_0: 8868729072188591806
+      goose 1_0: 1238448586401026881
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
