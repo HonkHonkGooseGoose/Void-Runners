@@ -21,13 +21,4 @@ public class Obstacle : MonoBehaviour
         // Calculate the length of the obstacle based on its size
         length = Vector3.Distance(startObject.position, endObject.position);
     }
-    
-    void Update()
-    {
-        // Update the length if the start or end objects move
-        Debug.Log("Obstacle Length: " + length);
-    }
-
-
-
 }
