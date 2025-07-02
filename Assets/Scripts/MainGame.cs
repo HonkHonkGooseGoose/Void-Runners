@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 using System.Collections;
 using UnityEditor.Rendering;
@@ -18,15 +19,15 @@ public class MainGame : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //static int obsticalSelect(Array Obstical)
-        //{
+        // static int obsticalSelect(Array Obstical)
+        // {
 
-        //}
+        // }
         Console.WriteLine("Update");
         
     }
 
-     private static ArrayList generateObstacles(List<string> obstacleList, int playerPosition, ArrayList<string> loadedObsaicle)
+     private static List<string> generateObstacles(List<string> obstacleList, int playerPosition, List<string> loadedObstacle)
     {
         int expectedObsticle;
         int expectedPlayerPosition = 2;
@@ -40,7 +41,7 @@ public class MainGame : MonoBehaviour
         {
             for (int i = 0; i < difference; i++)
             {
-                expectedObsticle = select.Next(0, obstacleList.Length - 1);
+                expectedObsticle = select.Next(0, obstacleList.Count - 1);
                 loadedObstacle.Add(obstacleList[expectedObsticle]);
                 loadedObstacle.RemoveAt(0);
             }
