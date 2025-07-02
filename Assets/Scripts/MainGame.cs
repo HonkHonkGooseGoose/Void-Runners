@@ -37,7 +37,10 @@ public class MainGame : MonoBehaviour
         maxLoadedObstacles = 4;
 
         // fill the loaded obstacles with the first 4 obstacles by using PickRandomScene and then adding them
-
+        for (int j = 0; j < maxLoadedObstacles; j++)
+        {
+            loadedObstacles.Add(PickRandomObstacle());
+        }
     }
 
     // Update is called once per frame
@@ -65,7 +68,7 @@ public class MainGame : MonoBehaviour
         {
             for (int i = 0; i < difference; i++)
             {
-                string newObstacle = PickRandomScene();
+                string newObstacle = PickRandomObstacle();
                 AddObstacle(newObstacle);
                 RemoveObstacle(loadedObstacles[0]);
             }
@@ -73,14 +76,16 @@ public class MainGame : MonoBehaviour
         }
     }
 
-    private string PickRandomScene()
+    private string PickRandomObstacle()
     {
+
+        string selectedObstacle = "";
         do
         {
             int i = rnd.Next(0, obstacleList.Count);
             selectedObstacle = obstacleList[i];
 
-        } while (loadedObstacles.Contains(selectedObstacle);
+        } while (loadedObstacles.Contains(selectedObstacle));
         // Pick a random scene from the obstacleList and return the name of the obstacle if it is not in loadedObstacles already
 
         // while a object hasnt been picked
@@ -100,6 +105,7 @@ public class MainGame : MonoBehaviour
         // Add the obstacle to the scene
 
         // get the length of the obstacle and add it to the lengths list
+        loadedObstacles.Add(PickRandomObstacle());
 
 
     }
@@ -112,6 +118,8 @@ public class MainGame : MonoBehaviour
         // Remove the obstacle from the scene
 
         // remove the length of the obstacle from the lengths list
+        loadedObstacles.RemoveAt(0);
+
     }
 
 
