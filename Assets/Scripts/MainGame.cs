@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UIElements;
 
 public class MainGame : MonoBehaviour
 {
@@ -24,7 +25,12 @@ public class MainGame : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        maxLoadedObstacles = 4;
+        //maxLoadedObstacles = 4;
+        //string newObstacle = PickRandomObstacle();
+        //AddObstacle(newObstacle);
+        //float length = transform.Find(newObstacle).GetComponent<Obstacle>().length;
+        //nextSpawnX -= length;
+
 
         for (int j = 0; j < maxLoadedObstacles; j++)
         {
