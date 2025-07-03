@@ -10,6 +10,7 @@ public class PlayerControllerPlatformer : MonoBehaviour
 
     float jumpForce = 8.0f;
     bool jumping = false;
+    bool death = false;
 
     Rigidbody2D rb;
     SpriteRenderer playerSprite;
@@ -79,6 +80,7 @@ public class PlayerControllerPlatformer : MonoBehaviour
         {
             //gameObject.SetActive(false);
             playerSprite.color = Color.red;
+            death = true;
         }
     }
 }
