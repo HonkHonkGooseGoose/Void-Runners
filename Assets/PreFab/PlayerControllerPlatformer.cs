@@ -5,11 +5,12 @@ using UnityEngine.InputSystem;
 
 public class PlayerControllerPlatformer : MonoBehaviour
 {
-    public float speed = 10;
+    public float speed = 3;
     float moveX;
 
     float jumpForce = 8.0f;
     bool jumping = false;
+    bool death = false;
 
     Rigidbody2D rb;
     SpriteRenderer playerSprite;
@@ -48,6 +49,10 @@ public class PlayerControllerPlatformer : MonoBehaviour
 
     void move()
     {
+        if (Keyboard.current.shiftKey.isPressed)
+            speed = 100;
+        else
+            speed = 9;
         moveX = 0f;
         if (Keyboard.current != null)
         {
@@ -79,6 +84,8 @@ public class PlayerControllerPlatformer : MonoBehaviour
         {
             //gameObject.SetActive(false);
             playerSprite.color = Color.red;
+            death = true;
+            SceneManager.LoadScene("EndScreen");
         }
     }
 }
