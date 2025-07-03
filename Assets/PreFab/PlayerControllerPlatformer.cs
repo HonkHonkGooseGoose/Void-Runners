@@ -85,6 +85,7 @@ public class PlayerControllerPlatformer : MonoBehaviour
             //gameObject.SetActive(false);
             playerSprite.color = Color.red;
             death = true;
+            SceneManager.LoadScene("EndScreen");
         }
     }
 }
