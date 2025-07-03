@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerControllerPlatformer : MonoBehaviour
 {
-    public float speed = 9;
+    public float speed = 3;
     float moveX;
 
     float jumpForce = 8.0f;
@@ -50,7 +50,7 @@ public class PlayerControllerPlatformer : MonoBehaviour
     void move()
     {
         if (Keyboard.current.shiftKey.isPressed)
-            speed = 18;
+            speed = 100;
         else
             speed = 9;
         moveX = 0f;

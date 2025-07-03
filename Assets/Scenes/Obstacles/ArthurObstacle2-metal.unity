@@ -135,6 +135,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -5.89
       objectReference: {fileID: 0}
+    - target: {fileID: 2806999866330540272, guid: d370e390a1bad2a4a9420c90eb00a9e8, type: 3}
+      propertyPath: m_TagString
+      value: Death
+      objectReference: {fileID: 0}
     - target: {fileID: 3890446005603465663, guid: d370e390a1bad2a4a9420c90eb00a9e8, type: 3}
       propertyPath: m_Name
       value: ObstacleContainer
@@ -630,6 +634,10 @@ PrefabInstance:
     - target: {fileID: 4281453152363371904, guid: d370e390a1bad2a4a9420c90eb00a9e8, type: 3}
       propertyPath: m_Tiles.Array.data[14].second.m_TileObjectToInstantiateIndex
       value: 65535
+      objectReference: {fileID: 0}
+    - target: {fileID: 4723814114909000071, guid: d370e390a1bad2a4a9420c90eb00a9e8, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 4914565995994813972, guid: d370e390a1bad2a4a9420c90eb00a9e8, type: 3}
       propertyPath: m_Size.x
