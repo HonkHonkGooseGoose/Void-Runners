@@ -6,7 +6,10 @@ using UnityEngine.InputSystem;
 public class PlayerControllerPlatformer : MonoBehaviour
 {
     public float speed = 3;
+    public float delayTime = 2f;
     float moveX;
+    public MonoBehaviour movementScript;
+
 
     float jumpForce = 8.0f;
     bool jumping = false;
@@ -45,26 +48,29 @@ public class PlayerControllerPlatformer : MonoBehaviour
         }
     }
 
-
-
     void move()
     {
-        if (Keyboard.current.shiftKey.isPressed)
-            speed = 100;
-        else
-            speed = 9;
-        moveX = 0f;
-        if (Keyboard.current != null)
+
+        if (!death)
         {
-            // Simple left/right input
-            if (Keyboard.current.leftArrowKey.isPressed)
-                moveX = -speed * Time.deltaTime;
-            else if (Keyboard.current.rightArrowKey.isPressed)
-                moveX = speed * Time.deltaTime;
-        }
-        //moveX = Input.GetAxis("Horizontal") * speed * Time.deltaTime;
-        transform.Translate(moveX, 0, 0);
+                
+            if (Keyboard.current.shiftKey.isPressed)
+                speed = 100;
+            else
+                speed = 9;
+            moveX = 0f;
+            if (Keyboard.current != null)
+            {
+                // Simple left/right input
+                if (Keyboard.current.leftArrowKey.isPressed)
+                    moveX = -speed * Time.deltaTime;
+                else if (Keyboard.current.rightArrowKey.isPressed)
+                    moveX = speed * Time.deltaTime;
+            }
+            //moveX = Input.GetAxis("Horizontal") * speed * Time.deltaTime;
+            transform.Translate(moveX, 0, 0);
         //rb.velocity = new Vector2 (moveX, rb.velocity.y);
+        }
     }
 
     void jump()
@@ -85,6 +91,7 @@ public class PlayerControllerPlatformer : MonoBehaviour
             //gameObject.SetActive(false);
             playerSprite.color = Color.red;
             death = true;
+            GetComponent<BoxCollider2D>().enabled = false;
             SceneManager.LoadScene("EndScreen");
         }
     }
