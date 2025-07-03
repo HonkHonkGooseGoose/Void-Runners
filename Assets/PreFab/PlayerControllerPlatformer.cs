@@ -5,7 +5,13 @@ using UnityEngine.InputSystem;
 
 public class PlayerControllerPlatformer : MonoBehaviour
 {
+<<<<<<< Updated upstream
     public float speed = 3;
+=======
+    public float speed = 2;
+
+    public Animator animator;
+>>>>>>> Stashed changes
     float moveX;
 
     float jumpForce = 8.0f;
@@ -27,6 +33,7 @@ public class PlayerControllerPlatformer : MonoBehaviour
         // Movement
 
         move();
+        animator.SetFloat("Speed", Mathf.Abs(moveX));
         //if (moveX > 0)
         //{
         //    playerSprite.flipX = false;
@@ -50,7 +57,11 @@ public class PlayerControllerPlatformer : MonoBehaviour
     void move()
     {
         if (Keyboard.current.shiftKey.isPressed)
+<<<<<<< Updated upstream
             speed = 100;
+=======
+            speed = 10;
+>>>>>>> Stashed changes
         else
             speed = 9;
         moveX = 0f;
