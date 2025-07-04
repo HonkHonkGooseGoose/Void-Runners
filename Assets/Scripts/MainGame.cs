@@ -29,6 +29,7 @@ public class MainGame : MonoBehaviour
 
     // Track where the next obstacle should begin (world-space X)
     float nextSpawnX = 0f;
+    float passedDistance = 0f;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -47,7 +48,7 @@ public class MainGame : MonoBehaviour
     void Update()
     {
         float playerX = transform.Find("Player").position.x; // Get the player's X position          
-        int currentIdx = GetObjectIndex(playerX, lengths);
+        int currentIdx = GetObjectIndex(playerX - passedDistance, lengths);
 
         // if the player is past the second segment
         if (currentIdx > 1)                               
@@ -120,7 +121,7 @@ public class MainGame : MonoBehaviour
         loadedObstacles.RemoveAt(0);
         float removedLen = lengths[0];
         lengths.RemoveAt(0);
-        nextSpawnX -= removedLen;
+        passedDistance += removedLen;
     }
 
     
