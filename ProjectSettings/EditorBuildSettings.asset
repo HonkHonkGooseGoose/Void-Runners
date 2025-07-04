@@ -45,8 +45,26 @@ EditorBuildSettings:
     path: Assets/Scenes/Obstacles/pranav3.unity
     guid: 1ca67cc7b7042f34997397962518c600
   - enabled: 1
+    path: Assets/Scenes/Obstacles/Ryan9.unity
+    guid: d8cd37024a15f114899ee8e47fe56a6e
+  - enabled: 1
+    path: Assets/Scenes/Obstacles/Ryan10.unity
+    guid: bfe8dde17cd239f409c11d5acd539e20
+  - enabled: 1
     path: Assets/Scenes/Obstacles/pranav4.unity
     guid: f7b835f7e89708a45a0ea15333363a50
+  - enabled: 1
+    path: Assets/Scenes/Obstacles/Ryan5.unity
+    guid: b0f18c75f9552804fb5586fe88180ebd
+  - enabled: 1
+    path: Assets/Scenes/Obstacles/Ryan6.unity
+    guid: 8cf2843c2f0658c49b4c4a65b1626400
+  - enabled: 1
+    path: Assets/Scenes/Obstacles/Ryan7.unity
+    guid: fd011e329b503ef488b26721678337be
+  - enabled: 1
+    path: Assets/Scenes/Obstacles/Ryan8.unity
+    guid: da61c2192daafe5469e8dec7771b1d64
   - enabled: 1
     path: Assets/Scenes/Obstacles/Ryan1.unity
     guid: 25eae53add367f14fa9087ce038dfe2b
@@ -60,8 +78,14 @@ EditorBuildSettings:
     path: Assets/Scenes/Obstacles/Ryan4.unity
     guid: dd066c67b5359a749b06810429916b2d
   - enabled: 1
+    path: Assets/Scenes/MainGame.unity
+    guid: 705c7c1f7178a554492fef14a1a9822a
+  - enabled: 1
     path: Assets/Scenes/Obstacles/ArthurObstacle2-metal.unity
     guid: fd3e000868c761f4bb9ca05ad3d4cc3e
+  - enabled: 1
+    path: Assets/Scenes/EndScreen.unity
+    guid: 92933f21d88afa04f8c7adaa03ae5712
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
