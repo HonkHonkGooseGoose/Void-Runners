@@ -302,7 +302,7 @@ GameObject:
   - component: {fileID: 262413689}
   m_Layer: 0
   m_Name: HAZARD
-  m_TagString: Untagged
+  m_TagString: Death
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -662,7 +662,7 @@ GameObject:
   - component: {fileID: 969786249}
   m_Layer: 0
   m_Name: Ground
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
