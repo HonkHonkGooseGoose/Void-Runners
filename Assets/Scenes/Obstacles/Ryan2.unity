@@ -135,10 +135,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -3.97
       objectReference: {fileID: 0}
-    - target: {fileID: 2806999866330540272, guid: d370e390a1bad2a4a9420c90eb00a9e8, type: 3}
-      propertyPath: m_TagString
-      value: Death
-      objectReference: {fileID: 0}
     - target: {fileID: 3890446005603465663, guid: d370e390a1bad2a4a9420c90eb00a9e8, type: 3}
       propertyPath: m_Name
       value: ObstacleContainer

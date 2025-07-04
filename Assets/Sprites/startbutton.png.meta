@@ -1,10 +1,22 @@
 fileFormatVersion: 2
-guid: c5c692f126d4e3452aef1a3cf1dacd24
+guid: bf6866cd684040e498f6239a19566b88
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8868729072188591806
-    second: duck_0
+      213: 4895499444567258611
+    second: startbutton_0
+  - first:
+      213: 5068878288513805368
+    second: startbutton_1
+  - first:
+      213: 818011417833648483
+    second: startbutton_2
+  - first:
+      213: -3108597112441584172
+    second: startbutton_3
+  - first:
+      213: 422866824687281744
+    second: startbutton_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -97,19 +109,6 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
     buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -139,23 +138,133 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: duck_0
+      name: startbutton_0
       rect:
         serializedVersion: 2
         x: 55
-        y: 55
-        width: 146
-        height: 146
+        y: 164
+        width: 40
+        height: 54
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ebe0bf44a1e041b70800000000000000
-      internalID: 8868729072188591806
+      spriteID: 3f5bd8faece40f340800000000000000
+      internalID: 4895499444567258611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: startbutton_1
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 166
+        width: 37
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83c2e8482f5485640800000000000000
+      internalID: 5068878288513805368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: startbutton_2
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 166
+        width: 25
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 361303eec092a5b00800000000000000
+      internalID: 818011417833648483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: startbutton_3
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 165
+        width: 30
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d54d13756b0cd4d0800000000000000
+      internalID: -3108597112441584172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: startbutton_4
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 166
+        width: 37
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05668c8f2235ed500800000000000000
+      internalID: 422866824687281744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: startbutton_5
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 150
+        width: 226
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c69d04cce4792e7429f27e4d010a971d
+      internalID: -689566680
       vertices: []
       indices: 
       edges: []
@@ -164,7 +273,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: f710e1bdbdc95124f85b7c5fa24655bf
     internalID: 0
     vertices: []
     indices: 
@@ -174,7 +283,12 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      duck_0: 8868729072188591806
+      startbutton_0: 4895499444567258611
+      startbutton_1: 5068878288513805368
+      startbutton_2: 818011417833648483
+      startbutton_3: -3108597112441584172
+      startbutton_4: 422866824687281744
+      startbutton_5: -689566680
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
