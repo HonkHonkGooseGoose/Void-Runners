@@ -8,7 +8,7 @@ public class PlayerControllerPlatformer : MonoBehaviour
     public float speed = 3;
     float moveX;
 
-    float jumpForce = 8.0f;
+    float jumpForce = 8.2f;
     bool jumping = false;
     bool death = false;
 
@@ -50,7 +50,7 @@ public class PlayerControllerPlatformer : MonoBehaviour
     void move()
     {
         if (Keyboard.current.shiftKey.isPressed)
-            speed = 100;
+            speed = 15;
         else
             speed = 9;
         moveX = 0f;
@@ -85,6 +85,7 @@ public class PlayerControllerPlatformer : MonoBehaviour
             //gameObject.SetActive(false);
             playerSprite.color = Color.red;
             death = true;
+            SceneManager.LoadScene("EndScreen");
         }
     }
 }

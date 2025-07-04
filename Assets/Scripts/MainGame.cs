@@ -16,8 +16,14 @@ public class MainGame : MonoBehaviour
     {
         //"pranav1","pranav2","pranav3","pranav4",
 
-        "ryan1","ryan2","ryan3","ryan4",
-        "ryan4","ryan6","ryan7","ryan8", 
+        "ryan1","ryan2","ryan3",//"ryan4",
+        "ryan5","ryan6","ryan7","ryan8",
+        "ryan9","ryan10","ArthurObstacle-mars",
+        "ArthurObstacle2-metal","ArthurObstacle3-moon",
+        "ArthurObstacle4-ALL","ArthurObstacle6",
+
+        //"ArthurObstacleSimple5","maria 2", "maria1", "maria3"
+        //"pranav1", "pranav2", "pranav3", "pranav4" 
 
     };
 
